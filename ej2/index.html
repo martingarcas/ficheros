@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir y Previsualizar PDF</title>
+    <style>
+        .pdf-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        object {
+            border: 1px solid black;
+            width: 100%;
+            height: 600px; /* Ajusta la altura según tus necesidades */
+        }
+    </style>
+</head>
+<body>
+    <h1>Subir y Previsualizar PDF</h1>
+    <form id="pdf-form" action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" id="file-input" name="pdf_file" accept="application/pdf">
+        <button type="submit">Subir PDF</button>
+    </form>
+    <div id="pdf-container" class="pdf-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
